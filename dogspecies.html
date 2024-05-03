@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Suņu wiki</title>
-</head>
-<body>
-
-<h1>Visa nepieciešamā informācija, ko vajag zināt par suņu sķirnēm</h1>
-
+<html lang="en">
+     <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dog Species Information</title> 
+        <style> 
+         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; } 
+         header { background-color: #333; color: #fff; padding: 20px; text-align: center; }
+         nav { background-color: #666; color: #fff; padding: 10px; text-align: center; }
+         nav a { text-decoration: none; color: #fff; padding: 0 10px; } section { padding: 20px; } 
+         footer { background-color: #333; color: #fff; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; } 
+         .breed-name { color: #333; cursor: pointer; } 
+         .breed-details { display: none; margin-top: 10px; } 
+         .breed-details.active { display: block; } 
+        </style> 
+    </head>
+ <body> 
+    <header> <h1>SUŅU ŠĶIRŅU INFORMĀCIJA</h1> </header>
+    <nav> 
+        <a href="#about">About</a> 
+        <a href="#breeds">Breeds</a>
+        <a href="#care">Care</a>
+        <a href="#gallery">Gallery</a> 
+        <a href="#contact">Contact</a> 
+    </nav> 
+    <section id="about"> 
+        <h2>About Dog Species</h2> 
+        <p>Dogs are domesticated mammals, not natural wild animals. They were originally bred from wolves. They have been bred by humans for a long time, and were the first animals ever to be domesticated.</p>
+    </section>
+    <section id="breeds"> 
+        <h2>Popular Dog Breeds</h2> 
+        <div class="breed"> 
+            <h3 class="breed-name" onclick="toggleDetails('labrador')">Labrador Retriever</h3>
+             <div class="breed-details" id="labrador-details"> 
+                <p><strong>Looks:</strong> 
+Labradors are medium to large-sized dogs with a sturdy build and short, dense coat. They come in three main colors: yellow, black, and chocolate.</p> 
+                <p><strong>Attitude:</strong>
+Labradors are friendly, outgoing, and intelligent. They are known for their gentle temperament and eagerness to please, making them excellent family pets and service dogs.</p> 
+                <p><strong>Health Issues:</strong> 
+Labradors are prone to obesity, hip dysplasia, and certain genetic conditions like progressive retinal atrophy and exercise-induced collapse.</p> 
+            </div> 
+        </div> 
+        <div class="breed"> 
+            <h3 class="breed-name" onclick="toggleDetails('german_shepherd')">German Shepherd</h3> 
+            <div class="breed-details" id="german_shepherd-details"> 
+                <p><strong>Looks:</strong> 
+                    German Shepherds are medium to large-sized dogs with a muscular build and a distinctive tan and black coat. They have erect ears and a noble expression.</p> 
+                <p><strong>Attitude:</strong>
+                    German Shepherds are loyal, confident, and highly trainable. They are protective of their family and make excellent guard dogs, police dogs, and service dogs.</p> 
+                <p><strong>Health Issues:</strong> 
+                    German Shepherds are prone to hip and elbow dysplasia, bloat, degenerative myelopathy, and certain skin conditions like allergies and eczema.</p> 
+            </div> 
+        </div>
+    </section> 
+    <section id="care">
+         <h2>Dog Care Tips</h2> 
+         <p>Provide a balanced diet, regular exercise, proper grooming, and regular visits to the vet for vaccinations and check-ups.</p>
+    </section> 
+    <section id="gallery">
+         <h2>Dog Gallery</h2> <img src="labrador.jpg" alt="Labrador Retriever"> 
+         <img src="german_shepherd.jpg" alt="German Shepherd"> 
+    </section>
+    <script> function toggleDetails(breed) { var details = document.getElementById(breed + '-details');
+     details.classList.toggle('active'); } 
+    </script>
 </body>
 </html>
